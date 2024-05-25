@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link type="text/css" href="./src/CSS/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="./src/CSS/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="./src/JS/materialize.min.js"></script>
+    <link rel="manifest" href="./manifest.json">
+  </head>
+  <body>
+    <div id="root">
+    </div>
+    <div class="recipes container grey-text text-darken-1">
+    
+    </div>
+     <!-- add recipe side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form class="add-recipe container section">
+      <h6 >New Contact</h6>
+      <div class="divider"></div>
+      <div class="input-field">
+        <input placeholder="e.g. Tushar" id="title" type="text" class="validate">
+        <label for="title">Name: </label>
+      </div>
+      <div class="input-field">
+        <input placeholder="e.g. 9599820622" id="ingredients" type="text" class="validate">
+        <label for="ingredients">Contact Number: </label>
+      </div>
+      <div class="input-field center">
+        <button class="btn-small">Add</button>
+      </div>
+    </form>
+  </div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCbPlmoNpGTyM-u0C2YR2_3w_K8wpERLec",
+  authDomain: "pwa-app-d718d.firebaseapp.com",
+  projectId: "pwa-app-d718d",
+  storageBucket: "pwa-app-d718d.appspot.com",
+  messagingSenderId: "792088039380",
+  measurementId: "G-XQMCHJ9ENB"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+  </script>
+    <script src="/src/JS/app.js"></script>
+    <script src="/src/JS/db.js"></script>
+    <script src="/src/JS/ui.js"></script>
+  </body>
+</html>
